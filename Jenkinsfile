@@ -9,7 +9,7 @@ pipeline {
             }
         }
         
-        stage('Yarn Install') {
+        stage('Yarn Installing') {
             steps {
                 // This step runs a Windows batch command to execute 'yarn install'
                 bat 'yarn install'
@@ -20,12 +20,12 @@ pipeline {
     post {
         success {
             // This block will be executed if the pipeline succeeds
-            echo 'Yarn install succeeded'
+            echo 'installation succeeded'
         }
 
         failure {
             // This block will be executed if the pipeline fails
-            echo 'Yarn install failed'
+            echo ' installation failed'
         }
     }
 }
